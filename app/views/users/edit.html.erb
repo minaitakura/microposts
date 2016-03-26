@@ -7,16 +7,20 @@
 
 
       <%= f.label :name %>
-      <%= f.text_field :name %>
+      <%= f.text_field :name, class: 'form-control' %>
 
       <%= f.label :email %>
-      <%= f.text_field :email %>
+      <%= f.text_field :email, class: 'form-control' %>
+      
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+      
 
       <%= f.label :region %>
-      <%= f.text_field :region %>
+      <%= f.text_field :region, class: 'form-control' %>
       
       <%= f.label :body %>
-      <%= f.text_area :body %>
+      <%= f.text_area :body, class: 'form-control' %>
 
 
 
