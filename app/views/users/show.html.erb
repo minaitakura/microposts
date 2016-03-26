@@ -1,4 +1,26 @@
 <h1>
-  <%= gravatar_for @user %>
-  <%= @user.name %>
+<%= gravatar_for @user %>
+<%= @user.name %>
 </h1>
+<div class="col-md-6 col-md-offset-3">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Email
+    </div>
+    <div class="panel-body">
+        <%= @user.email %>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Region
+    </div>
+    <div class="panel-body">
+      <%= @user.region %>
+    </div>
+  </div>
+<p><%= link_to "Edit profile", edit_user_path %></p>
+</div>
+  
+
+
