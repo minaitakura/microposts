@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20160326060733) do
     t.string   "name"
     t.string   "email"
     t.string   "password_digest"
+    t.string   "body"
     t.string   "region"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
