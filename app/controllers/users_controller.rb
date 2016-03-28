@@ -32,6 +32,19 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
+  
+  def followings
+    @title = 'フォロー'
+    @user = User.find(params[:id])
+    @follow_users = @user.following_users
+  end
+  
+  def followers
+    @title = 'フォロワー'
+    @user = User.find(params[:id])
+    @follow_users = @user.follower_users
+    render 'followings'
+  end
 
   
   
@@ -47,7 +60,6 @@ class UsersController < ApplicationController
   end
   
   def check_user
-    @user = User.find(params[:id])
     if @user != current_user
       redirect_to root_url
     end
