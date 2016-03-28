@@ -132,6 +132,7 @@ aside {
       margin-bottom: 3px;
       margin-top: 0px;
     }
+    
   }
 }
 
@@ -189,4 +190,24 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+.follow_info {
+  list-style-type:none;
+  li {
+    padding:10px;
+    border:solid 1px #DDD;
+    border-radius:5px;
+ 
+  span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+  }
+}
+
+.user_detail{
+  margin-top:30px;
+  color:#222;
 }

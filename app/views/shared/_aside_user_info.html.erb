@@ -1,0 +1,10 @@
+<h1>
+  <%= gravatar_for user %>
+  <%= user.name %>
+</h1>
+<span><%= link_to "フォロー", followings_user_url %></span>
+<span><%= link_to "フォロワー", followers_user_url %></span>
+<div class="user_detail">
+  <div><%= user.body %></div>
+  <div><%= user.region %></div>
+</div>
