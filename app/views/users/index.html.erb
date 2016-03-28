@@ -1,0 +1,11 @@
+<h1>ユーザー一覧</h1>
+
+<div class="row">
+  <ol class="follow_info">
+    <% @users.each do |user| %>
+      <div class="col-md-4 col-sm-12"><li>
+      <%= render partial: 'other_info', locals: { follow_user: user } %>
+      </li></div>
+    <% end %>
+  </ol>
+</div>
