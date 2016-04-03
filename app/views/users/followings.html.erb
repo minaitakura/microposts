@@ -1,21 +1,19 @@
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
+     <%= render partial: 'shared/aside_user_info', locals: { user: @user } %>
     </section>
   </aside>
   <div class="col-md-8">
-    <% if @user.following_users.any? %>
-      <h3>
-        <%= @title %>( <%= @user.following_users.count%> ) 
-      </h3>
-      
-      <ol class="user_info">
+    <h3>
+      <%= @title %>( <%= @follow_users.count%> ) 
+    </h3>
+    <% if @follow_users.any? %>
+      <ol class="follow_info row">
         <% @follow_users.each do |follow_user| %>
-          <%= render 'other_info', locals: { user: follow_user } %>
+          <div class="col-md-6 col-sm-12"><li>
+          <%= render partial: 'other_info', locals: { follow_user: follow_user } %>
+          </li></div>
         <% end %>
       </ol>
     <% end %>
